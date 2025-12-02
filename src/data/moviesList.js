@@ -10,6 +10,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/dM2eC02Dq3iMtBZZDFtXSLHfFKJ.jpg',
       synopsis:
         "Paul Atreides s'unit à Chani et aux Fremen tout en préparant sa vengeance contre ceux qui ont détruit sa famille.",
+      genre: 'surnaturel',
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
       synopsis:
         "Diana Prince se retrouve face à un nouveau danger dans les années 80, période d'excès et de convoitise.",
+        genre: 'super-hero'
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg',
       synopsis:
         "Barbie et Ken s'aventurent dans le monde réel après avoir été expulsés de Barbieland.",
+        genre: 'humour'
     },
     {
       id: 4,
@@ -43,6 +46,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/jwfDFqzxBkXC5bERBZrCEfK9iii.jpg',
       synopsis:
         "L'identité de Spider-Man est révélée, entraînant le chaos et des menaces d'autres univers.",
+        genre: 'super-hero'
     },
     {
       id: 5,
@@ -54,6 +58,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/boAUuJBeID7VNp4L7LNMQs8mfQS.jpg',
       synopsis:
         "L'histoire du physicien J. Robert Oppenheimer et de son rôle dans le développement de la bombe atomique.",
+        genre: 'historique'
     },
     {
       id: 6,
@@ -65,6 +70,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/wF7jv3x51hXgkl7t5KHePuRjXc8.jpg',
       synopsis:
         'Les Avengers restants tentent de défaire les actions de Thanos après le claquement de doigts dévastateur.',
+        genre: 'super-hero'
     },
     {
       id: 7,
@@ -76,6 +82,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/bdYbHxECXsN169pVrTz2TobFqXb.jpg',
       synopsis:
         "Ethan Hunt et son équipe doivent traquer une nouvelle arme terrifiante menaçant l'humanité.",
+        genre: 'agent-secret'
     },
     {
       id: 8,
@@ -87,6 +94,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/gERwLGTa6JGN4qXjkip13eDaxy1.jpg', // Affiche de Sonic
       synopsis:
         "Les aventures de Sonic continuent avec l'arrivée d'un nouveau rival de taille.",
+        genre: 'animation'
     },
     {
       id: 9,
@@ -98,6 +106,7 @@ export default function moviesList() {
         'https://image.tmdb.org/t/p/w600_and_h900_face/v1467wvoQIXlVY5MtAqt3PUtOdH.jpg',
       synopsis:
         "Dom Toretto et sa famille sont confrontés à l'adversaire le plus mortel qu'ils aient jamais rencontré.",
+        genre: 'action'
     },
   ];
   return moviesList;

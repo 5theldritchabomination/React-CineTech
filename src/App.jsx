@@ -6,6 +6,18 @@ export default function App() {
     <>
       <h1>CinéTech</h1>
       <main>
+        <h2>Films à l'affiche</h2>
+        <ul>
+          {moviesListf.map((movie) => (
+            <li key={movie.id}>
+              <h3>{movie.title}</h3>
+              <p>
+                {movie.year} — {movie.director}
+              </p>
+              <p>Note : {movie.rating}</p>
+            </li>
+          ))}
+        </ul>
         <h2>Films coups de coeur</h2>
         <ul>
           {moviesListf
@@ -20,17 +32,19 @@ export default function App() {
               </li>
             ))}
         </ul>
-        <h2>Films à l'affiche</h2>
+        <h2>Films de super hero</h2>
         <ul>
-          {moviesListf.map((movie) => (
-            <li key={movie.id}>
-              <h3>{movie.title}</h3>
-              <p>
-                {movie.year} — {movie.director}
-              </p>
-              <p>Note : {movie.rating}</p>
-            </li>
-          ))}
+          {moviesListf
+            .filter((movie) => movie.genre.includes('super-hero'))
+            .map((movie) => (
+              <li key={movie.id}>
+                <h3>{movie.title}</h3>
+                <p>
+                  {movie.year} — {movie.director}
+                </p>
+                <p>Note : {movie.rating}</p>
+              </li>
+            ))}
         </ul>
       </main>
     </>
