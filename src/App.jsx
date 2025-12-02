@@ -4,9 +4,9 @@ export default function App() {
   console.log(moviesListf);
   return (
     <>
-      <h1>CinéTech</h1>
+      <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>CinéTech</h1>
       <main>
-        <h2>Films à l'affiche</h2>
+        <h2 style={{ fontSize: '20px' }}>Films à l'affiche</h2>
         <ul>
           {moviesListf.map((movie) => (
             <li key={movie.id}>
@@ -18,7 +18,7 @@ export default function App() {
             </li>
           ))}
         </ul>
-        <h2>Films coups de coeur</h2>
+        <h2 style={{ fontSize: '20px' }}>Films coups de coeur</h2>
         <ul>
           {moviesListf
             .filter((movie) => movie.rating >= 8)
@@ -32,7 +32,7 @@ export default function App() {
               </li>
             ))}
         </ul>
-        <h2>Films de super hero</h2>
+        <h2 style={{ fontSize: '20px' }}>Films de super hero</h2>
         <ul>
           {moviesListf
             .filter((movie) => movie.genre.includes('super-hero'))
