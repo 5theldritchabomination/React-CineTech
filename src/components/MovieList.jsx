@@ -1,3 +1,5 @@
+import MovieCard from './MovieCard';
+
 export default function MovieList({ movies }) {
   const moviesListf = movies();
   console.log(moviesListf);
@@ -27,63 +29,24 @@ export default function MovieList({ movies }) {
       </ul>
       <h2 className="text-2xl font-bold mb-4">Films à l'affiche</h2>
       <ul className="grid grid-cols-1 sm:grid-cols-5 gap-6">
-        {moviesListf.map((movies) => (
-          <li
-            key={movies.id}
-            className="bg-gray-100 rounded-xl p-4 shadow hover:animate-pulse"
-          >
-            <h3 className="text-xl font-semi-bold">{movies.title}</h3>
-            <p className="text-sm text-gray-600">
-              {movies.year} — {movies.director}
-            </p>
-            <p className="mt-2">Note : {movies.rating}</p>
-            <img
-              src={movies.poster}
-              className="w-full h-64 object-cover rounded"
-            ></img>
-          </li>
+        {moviesListf.map((movie) => (
+          <MovieCard movie={movie} />
         ))}
       </ul>
       <h2 className="text-2xl font-bold mb-4">Films coups de coeur</h2>
       <ul className="grid grid-cols-1 sm:grid-cols-5 gap-6">
         {moviesListf
           .filter((movies) => movies.rating >= 8)
-          .map((movies) => (
-            <li
-              key={movies.id}
-              className="bg-gray-100 rounded-xl p-4 shadow hover:animate-pulse"
-            >
-              <h3>{movies.title}</h3>
-              <p>
-                {movies.year} — {movies.director}
-              </p>
-              <p>Note : {movies.rating}</p>
-              <img
-                src={movies.poster}
-                className="w-full h-64 object-cover rounded"
-              ></img>
-            </li>
+          .map((movie) => (
+            <MovieCard movie={movie} />
           ))}
       </ul>
       <h2 className="text-2xl font-bold mb-4">Films de super hero</h2>
       <ul className="grid grid-cols-1 sm:grid-cols-5 gap-6">
         {moviesListf
           .filter((movies) => movies.genre.includes('super-hero'))
-          .map((movies) => (
-            <li
-              key={movies.id}
-              className="bg-gray-100 rounded-xl p-4 shadow hover:animate-pulse"
-            >
-              <h3>{movies.title}</h3>
-              <p>
-                {movies.year} — {movies.director}
-              </p>
-              <p>Note : {movies.rating}</p>
-              <img
-                src={movies.poster}
-                className="w-full h-64 object-cover rounded"
-              ></img>
-            </li>
+          .map((movie) => (
+            <MovieCard movie={movie} />
           ))}
       </ul>
     </main>
