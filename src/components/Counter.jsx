@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
-export default function Counter() {
-  const [count, setCount] = useState(0);
+export default function Counter({ startPoint, howMany }) {
+  const [count, setCount] = useState(startPoint);
+  const restart = () => {
+    setCount(startPoint);
+  };
   const increment = () => {
-    setCount(count + 1);
+    setCount(count + howMany);
   };
   const decrement = () => {
-    setCount(count - 1);
+    setCount(count - howMany);
   };
 
   return (
@@ -16,13 +19,19 @@ export default function Counter() {
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-1 rounded"
         onClick={increment}
       >
-        +1
+        +{howMany}
       </button>
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-1 rounded"
+        className="bg-red-500 hover:bg-red-700 text-white font-bold px-2 py-1 rounded"
         onClick={decrement}
       >
-        -1
+        -{howMany}
+      </button>
+      <button
+        className="bg-yellow-500 hover:bg-green-700 text-white font-bold px-2 py-1 rounded"
+        onClick={restart}
+      >
+        Restart
       </button>
     </div>
   );

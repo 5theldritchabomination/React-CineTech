@@ -63,7 +63,7 @@ export default function App() {
         </Section>
       </main>
 
-      <Counter></Counter>
+      <Counter startPoint={2} howMany={5} />
       <footer className="grid grid-cols-1 sm:grid-cols-4 gap-6 bg-gray-200">
         <div></div>
         <div>
